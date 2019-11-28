@@ -3,8 +3,7 @@
 const devUrl = 'http://117.28.240.244:3001/mock/35/'   //本地开发环境api url
 
 module.exports = {
-    baseUrl: './',
-
+    publicPath: './',
     productionSourceMap: false,
     devServer: {        
         proxy: {

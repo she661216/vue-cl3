@@ -130,7 +130,7 @@
 
 <script>
 import Schart from "vue-schart";
-import api from "../api/api";
+
 export default {
   name: "dashboard",
   data() {
@@ -232,11 +232,8 @@ export default {
   },
   methods: {
     //请求示例
-    async get() {
-      let res = await this.$request({
-        url: api.login + "?taskNo=1",
-        method: "get"
-      });
+    async get() {      
+       let res = await this.$api.login('1');
       if (res.code) {
         // this.$message.success(res.msg);
       }
